@@ -12,10 +12,21 @@ function JobCard({ job }) {
                 <StatusBadge status={job.status} />
             </div>
 
-            <p>{job.platform}</p>
-            <p>{job.location}</p>
-            <p>{job.salary}</p>
-            <p>{job.notes}</p>
+            <div className="job-meta">    
+                <p>{job.platform}</p>
+                <p>{job.location}</p>
+                <p>{job.salary}</p>
+            </div>
+
+            <p className="job-notes">{job.notes}</p>
+
+            <div className="skills-list">
+                {job.skills.map((skill) => (
+                    <span className="skill-chip" key={skill}>
+                        {skill}
+                    </span>
+                ))}
+            </div>
         </article>
     )
 }
