@@ -1,10 +1,20 @@
+import {jobs } from "./data/jobs"
+import JobCard from "./components/JobCard"
 import "./App.css";
+
+
 function App() {
   return (
-    <div className="app">
+    <main className="app">
       <h1>Job Application Tracker</h1>
       <p>Track saved roles, applications, stretch jobs, interviews and follow-ups.</p>
-    </div>
+
+      <section className="jobs-list">
+        {jobs.map((job) => (
+          <JobCard key={job.id} job={job} />
+        ))}
+      </section>
+    </main>
   );
 }
 
