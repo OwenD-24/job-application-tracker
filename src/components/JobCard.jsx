@@ -1,6 +1,6 @@
 import StatusBadge from "./StatusBadge"
 
-function JobCard({ job }) {
+function JobCard({ job, showNotes }) {
     return (
         <article className="job-card">
             <div className="job-card-header">
@@ -18,7 +18,7 @@ function JobCard({ job }) {
                 <p>{job.salary}</p>
             </div>
 
-            <p className="job-notes">{job.notes}</p>
+            {showNotes && <p className="job-notes">{job.notes}</p>}
 
             <div className="skills-list">
                 {job.skills.map((skill) => (

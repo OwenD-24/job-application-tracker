@@ -7,6 +7,7 @@ import "./App.css";
 
 function App() {
   const [selectedStatus, setSelectedStatus] = useState("all")
+  const [showNotes, setShowNotes] = useState(true)
   const filteredJobs = 
   selectedStatus === "all"
     ? jobs
@@ -21,9 +22,16 @@ function App() {
           setSelectedStatus={setSelectedStatus}
         />
 
+        <button 
+          className={`notes-toggle ${showNotes ? "active-toggle" : ""}`}
+          onClick={() => setShowNotes((prevShowNotes) => !prevShowNotes)}
+        >
+          {showNotes ? "Hide notes" : "Show notes"}
+        </button>
+
         <section className="jobs-list">
           {filteredJobs.map((job) => (
-            <JobCard key={job.id} job={job} />
+            <JobCard key={job.id} job={job} showNotes={showNotes} />
           ))}
         </section>
       </main>

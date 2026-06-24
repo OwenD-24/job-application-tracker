@@ -126,3 +126,20 @@
   background: #0f172a;
   color: #ffffff;
 }
+
+.notes-toggle {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 12px 0 24px;
+}
+
+.notes-toggle.active-toggle {
+  border-color: #0f172a;
+  background: #0f172a;
+  color: #ffffff;
+}
