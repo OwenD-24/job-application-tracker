@@ -104,3 +104,25 @@
   padding: 6px 10px;
   font-size: 0.8rem;
 }
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.filter-bar button {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-bar button.active-filter {
+  border-color: #0f172a;
+  background: #0f172a;
+  color: #ffffff;
+}

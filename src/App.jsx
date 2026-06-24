@@ -1,21 +1,33 @@
+import { useState } from "react"
 import {jobs } from "./data/jobs"
 import JobCard from "./components/JobCard"
+import FilterBar from "./components/FilterBar"
 import "./App.css";
 
 
 function App() {
-  return (
-    <main className="app">
-      <h1>Job Application Tracker</h1>
-      <p>Track saved roles, applications, stretch jobs, interviews and follow-ups.</p>
+  const [selectedStatus, setSelectedStatus] = useState("all")
+  const filteredJobs = 
+  selectedStatus === "all"
+    ? jobs
+    : jobs.filter((job) => job.status === selectedStatus)
+    return (
+      <main className="app">
+        <h1>Job Application Tracker</h1>
+        <p>Track saved roles, applications, stretch jobs, interviews and follow-ups.</p>
 
-      <section className="jobs-list">
-        {jobs.map((job) => (
-          <JobCard key={job.id} job={job} />
-        ))}
-      </section>
-    </main>
-  );
+        <FilterBar 
+          selectedStatus={selectedStatus}
+          setSelectedStatus={setSelectedStatus}
+        />
+
+        <section className="jobs-list">
+          {filteredJobs.map((job) => (
+            <JobCard key={job.id} job={job} />
+          ))}
+        </section>
+      </main>
+    );
 }
 
 export default App;
