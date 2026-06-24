@@ -1,8 +1,10 @@
 import { useState } from "react"
+import JobDetailsModal from "./JobDetailsModal"
 import StatusBadge from "./StatusBadge"
 
 function JobCard({ job, showNotes }) {
     const [showDetails, setShowDetails] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false)
         return (
             <article className="job-card">
                 <div className="job-card-header">
@@ -41,6 +43,13 @@ function JobCard({ job, showNotes }) {
                     </div>
                 )}
 
+                <button
+                    className="modal-open"
+                    onClick={() => setIsModalOpen(true)}
+                >
+                    Open modal
+                </button>
+
                 <div className="skills-list">
                     {job.skills.map((skill) => (
                         <span className="skill-chip" key={skill}>
@@ -48,6 +57,13 @@ function JobCard({ job, showNotes }) {
                         </span>
                     ))}
                 </div>
+
+                {isModalOpen && (
+                    <JobDetailsModal
+                        job={job}
+                        onClose={() => setIsModalOpen(false)}
+                    />
+                )}
             </article>
         )
 }

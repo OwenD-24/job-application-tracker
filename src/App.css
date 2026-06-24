@@ -172,3 +172,63 @@
   color: #334155;
   font-size: 0.9rem;
 }
+
+.modal-open {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-open:hover {
+  border-color: #0f172a;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.job-modal {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  width: min(520px, 100%);
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.35);
+}
+
+.job-modal h2 {
+  margin: 0 0 6px;
+}
+
+.job-modal h3 {
+  margin: 0 0 20px;
+  color: #334155;
+}
+
+.job-modal p {
+  margin: 8px 0;
+  color: #334155;
+}
+
+.modal-close {
+  float: right;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
