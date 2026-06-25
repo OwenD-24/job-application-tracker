@@ -6,12 +6,12 @@ export const jobs = [
     platform: "Apply4U",
     status: "applied",
     priority: "medium",
-    jobType: "Remote / Work from home",
-    location: "London",
+    jobType: "Full-time / Permanent",
+    location: "Remote",
     remotePolicy: "Remote",
-    salary: "Around £30k target range",
+    salary: "£28,000 - £32,000 per year",
     dateApplied: "2026-06-15",
-    followUpDate: "2026-06-22 to 2026-06-25",
+    followUpDate: "2026-06-30",
     cvUsed: "Full Stack Web Dev CV - JUNE 2026.pdf",
     portfolioIncluded: true,
     notes:
@@ -37,11 +37,11 @@ export const jobs = [
     remotePolicy: "Remote / UK business hours",
     salary: "From £35,000 per year",
     dateApplied: "2026-06-15",
-    followUpDate: "2026-06-22 - 2026-06-25",
+    followUpDate: "Sent follow-up on 2026-06-25",
     cvUsed:"Owen-Davis-FullStack.pdf",
     portfolioIncluded: true,
     notes:
-       "Strong fit because it connects junior full-stack development, AI-native working, client products, remote work, mentorship, fast growth and practical product building.",
+       "Applied by direct email on 2026-06-15. Followed up on 2026-06-25. Strong remote junior full-stack fit.",
     skills: [
         "React",
         "TypeScript",
@@ -57,18 +57,18 @@ export const jobs = [
     company: "Finimize",
     role: "Full Stack Engineer",
     platform: "Wellfound",
-    status: "applied",
+    status: "rejected",
     priority: "high stretch",
     jobType: "Full-time",
     location: "London",
     remotePolicy: "On-site or remote",
     salary: "£48,000 - £85,000 + equity",
     dateApplied: "2026-06-16",
-    followUpDate: "Around 7-10 days after applying",
+    followUpDate: "Rejected on 2026-06-19",
     cvUsed: "Owen-Davis-FullStack.pdf",
     portfolioIncluded: true,
     notes:
-        "Strong stretch role aligned with full-stack direction, React learning path, Python/Django background, SQL/PostgreSQL experience, APIs, product mindset and AI-assisted development.",
+        "Application rejected via Wellfound on 2026-06-19. Strong stretch role, but not moving forward.",
     skills: [
         "React",
         "JavaScript",
@@ -90,11 +90,11 @@ export const jobs = [
     remotePolicy: "Remote only",
     salary: "$60,000 - $70,000",
     dateApplied: "2026-06-23",
-    followUpDate: "Around 7-10 days after applying",
+    followUpDate: "Check around 2026-07-01 to 2026-07-07",
     cvUsed: "Owen-Davis-Fullstack.pdf",
     portfolioIncluded: true,
     notes:
-       "Good direction fit because it focuses on AI automation, business workflow systems, internal tools, OpenAI/API integrations, Make.com, n8n and reducing manual business work. Stretch because it asks for 10 years experience.",
+       "Applied through Wellfound on 2026-06-23. Confirmation email received. Wellfound says to expect a response in 1–2 weeks if there is a match. Strong AI automation direction fit, but stretch due to 10 years experience listed.",
     skills: [
         "React",
         "JavaScript",
@@ -129,6 +129,35 @@ export const jobs = [
         "Supabase",
         "RAG",
         "LLMs"
+    ]
+  },
+  {
+    id: 6,
+    company: "CyberSmart",
+    role: "Junior Desktop Software Engineer",
+    platform: "LinkedIn / CyberSmart careers site",
+    status: "applied",
+    priority: "high",
+    jobType: "Full-time",
+    location: "Remote / United Kingdom",
+    remotePolicy: "Remote",
+    salary: "Competitive salary and benefits",
+    dateApplied: "2026-06-25",
+    followUpDate: "Around 2026-07-02 to 2026-07-09",
+    cvUsed: "Owen-Davis-FullStack.pdf",
+    portfolioIncluded: true,
+    notes:
+      "Applied through the CyberSmart careers site on 2026-06-25 after finding the role on LinkedIn. Strong early-career software engineering fit focused on TypeScript/JavaScript, NodeJS, APIs, debugging, testing, documentation, Electron desktop application work and platform behaviour. Confirmation email received and email verification requested.",
+    skills: [
+      "TypeScript",
+      "JavaScript",
+      "NodeJS",
+      "APIs",
+      "Debugging",
+      "Unit testing",
+      "Git",
+      "Documentation",
+      "Electron"
     ]
   }
 ]
