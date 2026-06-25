@@ -159,5 +159,63 @@ export const jobs = [
       "Documentation",
       "Electron"
     ]
+  },
+  {
+    id: 7,
+    company: "Deel",
+    role: "Full Stack Engineer - EMEA",
+    platform: "Deel careers site / LinkedIn referral lead",
+    status: "saved",
+    priority: "future target",
+    jobType: "Full-time",
+    location: "EMEA / United Kingdom eligible",
+    remotePolicy: "Remote",
+    salary: "$40,000 - $120,000 USD",
+    dateApplied: "",
+    followUpDate: "",
+    cvUsed: "",
+    portfolioIncluded: false,
+    notes:
+      "Excellent future target role aligned with React, TypeScript, JavaScript, Express, APIs, Postgres, SaaS product work and remote-first teams. Not applying now because the role asks for at least 4 years of full-stack TypeScript experience and full ownership across client, server, service and database.",
+    skills: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Express",
+      "Next.js",
+      "Postgres",
+      "APIs",
+      "Testing",
+      "SaaS"
+    ]
+  },
+  {
+    id: 9,
+    company: "Jobgether Partner Company",
+    role: "Junior Full-Stack Engineer (AI Code Evaluation)",
+    platform: "LinkedIn / Jobgether",
+    status: "applied",
+    priority: "high",
+    jobType: "Full-time",
+    location: "United Kingdom",
+    remotePolicy: "Remote",
+    salary: "Not listed",
+    dateApplied: "2026-06-25",
+    followUpDate: "Around 2026-07-02 to 2026-07-09",
+    cvUsed: "Owen-Davis-FullStack.pdf",
+    portfolioIncluded: true,
+    notes:
+      "Applied through LinkedIn/Jobgether on 2026-06-25. Strong fit for React/full-stack learning and AI-assisted development direction. Role focuses on cloning, running and debugging AI-generated apps, evaluating frontend/backend code quality, documenting issues, supporting reusable components and improving AI code generation workflows. Portfolio was included via LinkedIn profile links.",
+    skills: [
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "Debugging",
+      "Code evaluation",
+      "AI-assisted development",
+      "Documentation"
+    ]
   }
 ]
