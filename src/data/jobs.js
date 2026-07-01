@@ -340,7 +340,7 @@ export const jobs = [
     company: "Suade",
     role: "Fintech Graduate Software Engineer (Backend) - Submissions - 2026",
     platform: "Suade Careers Page / Workable",
-    status: "applied",
+    status: "rejected",
     priority: "high",
     jobType: "Full-time",
     location: "London, United Kingdom",
@@ -351,7 +351,7 @@ export const jobs = [
     cvUsed: "Owen-Davis-FullStack-CV.pdf",
     portfolioIncluded: true,
     notes:
-      "Applied through the Suade careers page on Workable on 2026-06-29. Strong RegTech/FinTech backend graduate role focused on regulatory submissions, data validation, automation and translating regulatory requirements into code using SQL and Python. Good alignment with Python, SQL/PostgreSQL, data validation, API/ETL-style workflows, testing principles, Git, QA, debugging and financial workflow exposure. Application included CV, profile summary, cover letter, employment status, preferred hybrid work location, salary confirmation, right-to-work confirmation and privacy consent. Main risk is London hybrid expectations and degree preference, but application was submitted honestly with Level 3 software development training and commercial experience.",
+      "Rejected after initial Coderbyte technical assessment. Assessment covered Caesar cipher string manipulation and key/value aggregation using Python fundamentals. Main learning gaps identified: strings, loops, functions, dictionaries, split/join, sorted output, modulo, hidden test cases and exact output formatting. Use this as direction for Python/SQL RegTech learning plan.",
     skills: [
       "Python",
       "SQL",
