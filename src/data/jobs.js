@@ -484,5 +484,42 @@ export const jobs = [
       "Written communication",
       "Remote work"
     ]
+  },
+  {
+    id: 17,
+    company: "CPI Card Group",
+    role: "Software Developer I",
+    platform: "CPI Card Group Careers Page / LinkedIn",
+    status: "applied",
+    priority: "high",
+    jobType: "Full-time",
+    location: "Norwich, England, United Kingdom",
+    remotePolicy: "Remote",
+    salary: "Not listed",
+    dateApplied: "2026-07-02",
+    followUpDate: "Around 2026-07-09 to 2026-07-16",
+    cvUsed: "Owen-Davis-FullStack-CV.pdf",
+    portfolioIncluded: true,
+    notes:
+      "Applied through CPI Card Group careers portal for Software Developer I role. Strong fit for Python/FinTech/backend direction, focused on building, testing, debugging and maintaining web and mobile applications for modern financial services and manufacturing solutions. Role is part of a Python Agile team and includes Python, AWS services, Django/FastAPI, REST APIs, Git, documentation, testing, secure coding, PCI compliance awareness and AI-assisted development tools such as GitHub Copilot and Claude. Good alignment with commercial workflow software experience, debugging, documentation, AI-assisted development and current Python/SQL learning path. Main risks are 1+ years Python expectation and beneficial AWS/Docker/CI-CD experience, but the role states close supervision for complex duties and is positioned as junior.",
+    skills: [
+      "Python",
+      "Django",
+      "FastAPI",
+      "AWS",
+      "REST APIs",
+      "Git",
+      "Docker",
+      "Testing",
+      "Debugging",
+      "Technical documentation",
+      "Secure coding",
+      "PCI compliance",
+      "AI-assisted development",
+      "GitHub Copilot",
+      "Claude",
+      "Financial services",
+      "Backend development"
+    ]
   }
   ]
