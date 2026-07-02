@@ -4,7 +4,7 @@ export const jobs = [
     company: "Apply4U",
     role: "Junior Web Developer Remote",
     platform: "Apply4U",
-    status: "applied",
+    status: "no-response",
     priority: "medium",
     jobType: "Full-time / Permanent",
     location: "Remote",
@@ -15,7 +15,7 @@ export const jobs = [
     cvUsed: "Full Stack Web Dev CV - JUNE 2026.pdf",
     portfolioIncluded: true,
     notes:
-        "Remote junior web developer role aligned with portfolio, full-stack bootcamp background, React/TypeScript learning path, commercial workflow software experience, SQL/data exposure, testing, bug fixing and AI-assisted development direction.",
+        "Applied on 2026-06-15. Apply4U confirmation stated that if no response is received within 15 days, the application should be assumed unsuccessful. No response received by 2026-07-02, so this application has been closed as no response/unsuccessful.",
     skills: [
         "React",
         "TypeScript",
@@ -41,7 +41,7 @@ export const jobs = [
     cvUsed:"Owen-Davis-FullStack.pdf",
     portfolioIncluded: true,
     notes:
-       "Applied by direct email on 2026-06-15. Followed up on 2026-06-25. Strong remote junior full-stack fit.",
+       "Applied by direct email on 2026-06-15. Followed up on 2026-06-25. Strong remote junior full-stack fit aligned with React, TypeScript, SQL, YAML, testing, AI-assisted development and clear communication. Waiting until 2026-07-07 before closing as no response if no reply is received.",
     skills: [
         "React",
         "TypeScript",
@@ -68,7 +68,7 @@ export const jobs = [
     cvUsed: "Owen-Davis-FullStack.pdf",
     portfolioIncluded: true,
     notes:
-        "Application rejected via Wellfound on 2026-06-19. Strong stretch role, but not moving forward.",
+        "Applied through Wellfound for the Full Stack Engineer role. Rejected on 2026-06-19. High-stretch application aligned with React, Python/Django, SQL/PostgreSQL, APIs, product engineering and AI-assisted development, but likely too senior or competitive at this stage. Useful signal: keep strengthening full-stack project proof, Python/SQL confidence and commercial workflow examples before applying to similar higher-level product engineering roles again.",
     skills: [
         "React",
         "JavaScript",
@@ -94,7 +94,7 @@ export const jobs = [
     cvUsed: "Owen-Davis-Fullstack.pdf",
     portfolioIncluded: true,
     notes:
-       "Applied through Wellfound on 2026-06-23. Confirmation email received. Wellfound says to expect a response in 1–2 weeks if there is a match. Strong AI automation direction fit, but stretch due to 10 years experience listed.",
+       "Applied through Wellfound on 2026-06-23. Confirmation email received. Wellfound says to expect a response in 1–2 weeks if there is a match. Strong AI automation direction fit, but stretch due to 10 years experience listed. Keep open until 2026-07-07, then close as no response if no update is received.",
     skills: [
         "React",
         "JavaScript",
@@ -121,7 +121,7 @@ export const jobs = [
     cvUsed: "",
     portfolioIncluded: false,
     notes:
-        "Excellent React/TypeScript/Python/AI stack, but founding/lead ownership and 5-8 years experience make it too senior for now.",
+        "Excellent future target role aligned with React, TypeScript, Python, Supabase, RAG and LLMs, but founding/lead ownership and 5–8 years experience make it too senior for now. Save as a future benchmark role after stronger full-stack, Python/SQL and AI project proof is built.",
     skills: [
         "React",
         "TypeScript",
@@ -147,7 +147,7 @@ export const jobs = [
     cvUsed: "Owen-Davis-FullStack.pdf",
     portfolioIncluded: true,
     notes:
-      "Applied through the CyberSmart careers site on 2026-06-25 after finding the role on LinkedIn. Strong early-career software engineering fit focused on TypeScript/JavaScript, NodeJS, APIs, debugging, testing, documentation, Electron desktop application work and platform behaviour. Confirmation email received and email verification requested.",
+      "Applied through the CyberSmart careers site on 2026-06-25 after finding the role on LinkedIn. Strong early-career software engineering fit focused on TypeScript/JavaScript, NodeJS, APIs, debugging, testing, documentation, Electron desktop application work and platform behaviour. Confirmation email received and email verification requested. Waiting until 2026-07-09 before closing as no response if no update is received.",
     skills: [
       "TypeScript",
       "JavaScript",
@@ -205,7 +205,7 @@ export const jobs = [
     cvUsed: "Owen-Davis-FullStack.pdf",
     portfolioIncluded: true,
     notes:
-      "Applied through LinkedIn/Jobgether on 2026-06-25. Strong fit for React/full-stack learning and AI-assisted development direction. Role focuses on cloning, running and debugging AI-generated apps, evaluating frontend/backend code quality, documenting issues, supporting reusable components and improving AI code generation workflows. Portfolio was included via LinkedIn profile links.",
+      "Applied through LinkedIn/Jobgether on 2026-06-25. Strong fit for React/full-stack learning and AI-assisted development direction. Role focuses on cloning, running and debugging AI-generated apps, evaluating frontend/backend code quality, documenting issues, supporting reusable components and improving AI code generation workflows. Portfolio was included via LinkedIn profile links. Waiting until 2026-07-09 before closing as no response if no update is received.",
     skills: [
       "React",
       "JavaScript",
@@ -223,7 +223,7 @@ export const jobs = [
     company: "Starling Bank",
     role: "Software Engineer (ML Projects)",
     platform: "Starling Bank Careers Page",
-    status: "applied",
+    status: "rejected",
     priority: "high",
     jobType: "Full-time",
     location: "Manchester / London / Cardiff / Southampton, United Kingdom",
@@ -234,7 +234,7 @@ export const jobs = [
     cvUsed: "Owen-Davis-FullStack-CV.pdf",
     portfolioIncluded: true,
     notes:
-      "Applied through the Starling Bank careers page on 2026-06-29 for the Software Engineer (ML Projects) role. Stretch application but strong alignment with Python, JavaScript/React, SQL/PostgreSQL, AI/LLM interest, data workflows and fintech direction. Role involves designing, implementing and maintaining ML-enabled software features, integrating machine learning models into banking systems, working with engineers and data scientists, and contributing across infrastructure, pipelines and product features. Application included CV, tailored cover letter, salary expectation, Manchester hybrid availability, right-to-work details and a tailored response to 'Why would Starling Bank regret not hiring you?'. Portfolio link is included through the CV.",
+      "Rejected by Starling after hiring team review. Feedback stated they moved forward with candidates whose experience was a closer match to the role requirements. This was a high-stretch ML/FinTech engineering application. Useful signal: strengthen Python, SQL, backend/data workflows, testing, cloud basics and assessment readiness before applying to similar ML/data engineering roles again.",
     skills: [
       "Python",
       "JavaScript",
@@ -274,7 +274,7 @@ export const jobs = [
     cvUsed: "LinkedIn profile / CV not required at this stage",
     portfolioIncluded: true,
     notes:
-      "Applied through LinkedIn Easy Apply on 2026-06-29. High-priority stretch role because it aligns strongly with testing, debugging, API testing, QA, bug reproduction, workflow validation and AI-assisted tooling, but has gaps around C#/.NET and Playwright/Cypress. Role is remote-first with travel to Manchester around once per month. Company is a software house working with large brands and a platform that handles high-value transactions between major brands and UK banking institutions. Application was submitted through LinkedIn profile only, as the advert stated no CV was needed at this stage.",
+      "Applied through LinkedIn Easy Apply on 2026-06-29. High-priority stretch role because it aligns strongly with testing, debugging, API testing, QA, bug reproduction, workflow validation and AI-assisted tooling, but has gaps around C#/.NET and Playwright/Cypress. Role is remote-first with travel to Manchester around once per month. Company is a software house working with large brands and a platform that handles high-value transactions between major brands and UK banking institutions. Application was submitted through LinkedIn profile only, as the advert stated no CV was needed at this stage. Wait until 2026-07-13 before closing as no response if no update is received.",
     skills: [
       "Software testing",
       "Test automation",
@@ -312,7 +312,7 @@ export const jobs = [
     cvUsed: "Owen-Davis-FullStack-CV.pdf",
     portfolioIncluded: true,
     notes:
-      "Applied through the Landytech careers page on Workable on 2026-06-29. Strong Python/FinTech stretch role focused on building and maintaining services and tools that process and publish financial metrics for a B2B SaaS investment reporting platform. Good alignment with Python, SQL/relational databases, APIs, data pipelines, ETL-style workflows, financial data, debugging and clean code. Application included CV, LinkedIn profile, tailored cover letter, notice period, salary expectation, right-to-work confirmation and tailored answers explaining interest in Landytech and learning goals. Main risk is London hybrid expectations, but the advert states WFH is allowed depending on role.",
+      "Applied through the Landytech careers page on Workable on 2026-06-29. Strong Python/FinTech stretch role focused on building and maintaining services and tools that process and publish financial metrics for a B2B SaaS investment reporting platform. Good alignment with Python, SQL/relational databases, APIs, data pipelines, ETL-style workflows, financial data, debugging and clean code. Application included CV, LinkedIn profile, tailored cover letter, notice period, salary expectation, right-to-work confirmation and tailored answers explaining interest in Landytech and learning goals. Main risk is London hybrid expectations, but the advert states WFH is allowed depending on role. Wait until 2026-07-13 before closing as no response if no update is received.",
     skills: [
       "Python",
       "Object-oriented programming",
@@ -351,7 +351,7 @@ export const jobs = [
     cvUsed: "Owen-Davis-FullStack-CV.pdf",
     portfolioIncluded: true,
     notes:
-      "Rejected after initial Coderbyte technical assessment. Assessment covered Caesar cipher string manipulation and key/value aggregation using Python fundamentals. Main learning gaps identified: strings, loops, functions, dictionaries, split/join, sorted output, modulo, hidden test cases and exact output formatting. Use this as direction for Python/SQL RegTech learning plan.",
+      "Rejected after initial Coderbyte technical assessment. Assessment covered Caesar cipher string manipulation and key/value aggregation using Python fundamentals. Main learning gaps identified: strings, loops, functions, dictionaries, split/join, sorted output, modulo, hidden test cases and exact output formatting. Use this as direction for the Python/SQL RegTech learning plan and assessment-readiness practice.",
     skills: [
       "Python",
       "SQL",
