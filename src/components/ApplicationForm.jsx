@@ -18,7 +18,7 @@ function ApplicationForm({ addApplication }) {
     }))
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
 
     if (!formData.company.trim() || !formData.role.trim()) {
@@ -27,7 +27,6 @@ function ApplicationForm({ addApplication }) {
     }
 
     const newApplication = {
-        id: Date.now(),
         company: formData.company,
         role: formData.role,
         platform: "Manual entry",
@@ -50,7 +49,11 @@ function ApplicationForm({ addApplication }) {
         skills: ["Manual entry"]
     }
 
-    addApplication(newApplication)
+    const wasAdded = await addApplication(newApplication)
+
+    if (!wasAdded) {
+      return
+    }
 
     setFormData({
         company: "",

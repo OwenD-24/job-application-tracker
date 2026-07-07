@@ -232,3 +232,112 @@
   font-weight: 700;
   cursor: pointer;
 }
+
+.application-form {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 36px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.application-form h2 {
+  margin: 0 0 20px;
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.application-form form {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 12px 16px;
+  align-items: center;
+  margin-bottom: 22px;
+  max-width: 780px;
+}
+
+.application-form label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.application-form input,
+.application-form select {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  outline: none;
+}
+
+.application-form input:focus,
+.application-form select:focus {
+  border-color: #0f172a;
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08);
+}
+
+.application-form input::placeholder {
+  color: #94a3b8;
+}
+
+.application-form button[type="submit"] {
+  grid-column: 2;
+  justify-self: start;
+  border: 1px solid #0f172a;
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.application-form button[type="submit"]:hover {
+  background: #1e293b;
+}
+
+.application-form p {
+  margin: 8px 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.application-form p:first-of-type {
+  margin-top: 4px;
+}
+
+/* Extra statuses */
+
+.status-badge.interview {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.no-response {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+@media (max-width: 760px) {
+  .application-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .application-form button[type="submit"] {
+    grid-column: 1;
+  }
+
+  .application-form {
+    padding: 20px;
+  }
+}
