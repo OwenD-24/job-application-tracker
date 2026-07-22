@@ -1,52 +1,81 @@
 import { useState } from "react"
 
+const initialFormData = {
+  company: "",
+  role: "",
+  platform: "",
+  jobLink: "",
+  status: "applied",
+  priority: "",
+  jobType: "",
+  location: "",
+  remotePolicy: "",
+  salary: "",
+  dateApplied: "",
+  followUpDate: "",
+  cvUsed: "",
+  portfolioIncluded: true,
+  notes: "",
+  skillsText: ""
+}
+
 function ApplicationForm({ addApplication }) {
-  const [formData, setFormData] = useState({
-    company: "",
-    role: "",
-    jobLink: "",
-    salary: "",
-    status: "saved"
-  })
+  const [formData, setFormData] = useState(initialFormData)
 
   function handleChange(event) {
-    const { name, value } = event.target
+    const { name, value, type, checked } = event.target
 
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: value
+      [name]: type === "checkbox" ? checked : value
     }))
   }
 
   async function handleSubmit(event) {
     event.preventDefault()
 
-    if (!formData.company.trim() || !formData.role.trim()) {
-        alert("Company and role are required.")
-        return
+    if (
+      !formData.company.trim() ||
+      !formData.role.trim() ||
+      !formData.priority
+    ) {
+      alert("Company, role and priority are required.")
+      return
     }
 
+    const today = new Date().toISOString().split("T")[0]
+
+    const skills = formData.skillsText
+      .split(",")
+      .map((skill) => skill.trim())
+      .filter((skill) => skill !== "")
+
     const newApplication = {
-        company: formData.company,
-        role: formData.role,
-        platform: "Manual entry",
-        status: formData.status,
-        priority: "medium",
-        jobType: "Not set",
-        location: "Not set",
-        remotePolicy: "Not set",
-        salary: formData.salary || "Not listed",
-        dateApplied: formData.status === "applied"
-        ? new Date().toISOString().split("T")[0]
-        : "",
-        followUpDate: "",
-        cvUsed: "",
-        portfolioIncluded: false,
-        jobLink: formData.jobLink,
-        notes: formData.jobLink
-        ? `Added manually from ${formData.jobLink}`
-        : "Added manually through the tracker form.",
-        skills: ["Manual entry"]
+      company: formData.company.trim(),
+      role: formData.role.trim(),
+      platform: formData.platform.trim() || "Not set",
+      status: formData.status,
+      priority: formData.priority,
+      jobType: formData.jobType.trim() || "Not set",
+      location: formData.location.trim() || "Not set",
+      remotePolicy: formData.remotePolicy || "Not set",
+      salary: formData.salary.trim() || "Not listed",
+
+      dateApplied:
+        formData.status === "saved"
+          ? ""
+          : formData.dateApplied || today,
+
+      followUpDate: formData.followUpDate,
+      cvUsed: formData.cvUsed.trim(),
+      portfolioIncluded: formData.portfolioIncluded,
+      jobLink: formData.jobLink.trim(),
+
+      notes:
+        formData.notes.trim() ||
+        "Added manually through the tracker form.",
+
+      skills
     }
 
     const wasAdded = await addApplication(newApplication)
@@ -55,13 +84,7 @@ function ApplicationForm({ addApplication }) {
       return
     }
 
-    setFormData({
-        company: "",
-        role: "",
-        jobLink: "",
-        salary: "",
-        status: "saved"
-    })
+    setFormData(initialFormData)
   }
 
 
@@ -89,6 +112,65 @@ function ApplicationForm({ addApplication }) {
                 onChange={handleChange}
                 placeholder="e.g. Junior Software Developer"
             />
+
+            <label htmlFor="platform">Platform</label>
+            <input
+              id="platform"
+              name="platform"
+              type="text"
+              value={formData.platform}
+              onChange={handleChange}
+              placeholder="e.g. LinkedIn, Workable, direct email"
+            />
+
+            <label htmlFor="priority">Priority</label>
+            <select
+              id="priority"
+              name="priority"
+              value={formData.priority}
+              onChange={handleChange}
+            >
+              <option value="">Select priority</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+              <option value="stretch">Stretch</option>
+            </select> 
+
+            <label htmlFor="jobType">Job type</label>
+            <input
+              id="jobType"
+              name="jobType"
+              type="text"
+              value={formData.jobType}
+              onChange={handleChange}
+              placeholder="e.g. Full-time, Contract, Internship"
+            />
+
+            <label htmlFor="location">Location</label>
+            <input
+              id="location"
+              name="location"
+              type="text"
+              value={formData.location}
+              onChange={handleChange}
+              placeholder="e.g. Liverpool, Manchester, United Kingdom"
+            />    
+
+            <label htmlFor = "remotePolicy">Remote policy</label>
+            <select
+              id="remotePolicy"
+              name="remotePolicy"
+              value={formData.remotePolicy}
+              onChange={handleChange}
+            >
+              <option value="">Select remote policy</option>
+              <option value="Remote">Remote</option>
+              <option value="Remote UK">Remote UK</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="On-site">On-site</option>
+              <option value="Flexible">Flexible</option>
+            </select>
 
             <label htmlFor="jobLink">Job link</label>
             <input 
@@ -123,15 +205,65 @@ function ApplicationForm({ addApplication }) {
                 <option value="rejected">Rejected</option>
             </select>
 
+            <label htmlFor="dateApplied">Date applied</label>
+            <input
+              id="dateApplied"
+              name="dateApplied"
+              type="date"
+              value={formData.dateApplied}
+              onChange={handleChange}
+            />
+
+            <label htmlFor="followUpDate">Follow-up date</label>
+            <input
+              id="followUpDate"
+              name="followUpDate"
+              type="date"
+              value={formData.followUpDate}
+              onChange={handleChange}
+            />
+
+            <label htmlFor="cvUsed">CV used</label>
+            <input
+              id="cvUsed"
+              name="cvUsed"
+              type="text"
+              value={formData.cvUsed}
+              onChange={handleChange}
+              placeholder="e.g. Owen-Davis-FullStack-CV.pdf"
+            />
+
+            <label htmlFor="portfolioIncluded">Portfolio included</label>
+            <input
+              id="portfolioIncluded"
+              name="portfolioIncluded"
+              type="checkbox"
+              checked={formData.portfolioIncluded}
+              onChange={handleChange}
+            />
+
+            <label htmlFor="notes">Notes</label>
+            <textarea
+              id="notes"
+              name="notes"
+              value={formData.notes}
+              onChange={handleChange}
+              placeholder="Add application notes, follow-up details or useful context"
+            />
+
+            <label htmlFor="skillsText">Skills</label>
+            <input
+              id="skillsText"
+              name="skillsText"
+              type="text"
+              value={formData.skillsText}
+              onChange={handleChange}
+              placeholder="React, TypeScript, Python, SQL"
+            />
+
             <button type="submit">Add application</button>
 
         </form>
-
-            <p>Company preview: {formData.company}</p>
-            <p>Role preview: {formData.role}</p>
-            <p>Job Link preview: {formData.jobLink}</p>
-            <p>Salary preview: {formData.salary}</p>
-            <p>Status preview: {formData.status}</p>
     </section>
   )
 }

@@ -109,6 +109,43 @@ function App() {
     return true
   }
 
+  async function updateApplicationStatus(application, newStatus) {
+    const today = new Date().toISOString().split("T")[0]
+
+    const updates = {
+      status: newStatus,
+      date_applied:
+        newStatus === "saved"
+          ? null
+          : application.dateApplied || today
+    }
+
+    const { data, error } = await supabase
+      .from("applications")
+      .update(updates)
+      .eq("id", application.id)
+      .select()
+      .single()
+
+    if (error) {
+      console.error("Status update failed:", error)
+      alert(`Could not update application status: ${error.message}`)
+      return false
+    }
+
+    const updatedApplication = mapDbApplication(data)
+
+    setApplications((prevApplications) =>
+      prevApplications.map((currentApplication) =>
+        currentApplication.id === updatedApplication.id
+          ? updatedApplication
+          : currentApplication
+      )
+    )
+
+    return true
+  }
+
     return (
       <main className="app">
         <ApplicationForm addApplication={addApplication} />
@@ -133,7 +170,12 @@ function App() {
 
         <section className="jobs-list">
           {filteredJobs.map((job) => (
-            <JobCard key={job.id} job={job} showNotes={showNotes} />
+            <JobCard 
+              key={job.id} 
+              job={job} 
+              showNotes={showNotes}
+              updateApplicationStatus={updateApplicationStatus} 
+            />
           ))}
         </section>
       </main>

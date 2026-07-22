@@ -2,9 +2,24 @@ import { useState } from "react"
 import JobDetailsModal from "./JobDetailsModal"
 import StatusBadge from "./StatusBadge"
 
-function JobCard({ job, showNotes }) {
+function JobCard({ job, showNotes, updateApplicationStatus }) {
     const [showDetails, setShowDetails] = useState(false)
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isUpdatingStatus, setIsUpdatingStatus] = useState(false)
+
+    async function handleStatusChange(event) {
+        const newStatus = event.target.value
+
+        if (newStatus === job.status) {
+            return
+        }
+
+        setIsUpdatingStatus(true)
+
+        await updateApplicationStatus(job, newStatus)
+
+        setIsUpdatingStatus(false)
+    }
         return (
             <article className="job-card">
                 <div className="job-card-header">
@@ -13,7 +28,22 @@ function JobCard({ job, showNotes }) {
                         <h3>{job.role}</h3>
                     </div>
 
-                    <StatusBadge status={job.status} />
+                    <div className="status-controls">
+                        <StatusBadge status={job.status} />
+
+                        <select
+                            className="status-select"
+                            value={job.status}
+                            onChange={handleStatusChange}
+                            disabled={isUpdatingStatus}
+                        >
+                            <option value="saved">Saved</option>
+                            <option value="applied">Applied</option>
+                            <option value="interview">Interview</option>
+                            <option value="rejected">Rejected</option>
+                            <option value="no-response">No response</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div className="job-meta">    
