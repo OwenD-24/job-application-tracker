@@ -1,4 +1,14 @@
-function JobDetailsModal({ job, onClose }) {
+import type { JobApplication } from "../types/jobApplication"
+
+type JobDetailsModalProps = {
+    job: JobApplication
+    onClose: () => void
+}
+
+function JobDetailsModal({ 
+    job, 
+    onClose 
+}: JobDetailsModalProps) {
     return (
         <div className="modal-backdrop" onClick={onClose}>
             <div className="job-modal" onClick={(event) => event.stopPropagation()}>

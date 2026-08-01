@@ -1,6 +1,35 @@
 import { useState } from "react"
+import type { ChangeEvent, FormEvent } from "react"
+import type {
+  JobStatus,
+  JobApplication
+} from "../types/jobApplication"
 
-const initialFormData = {
+type ApplicationFormData = {
+  company: string
+  role: string
+  platform: string
+  jobLink: string
+  status: JobStatus
+  priority: string
+  jobType: string
+  location: string
+  remotePolicy: string
+  salary: string
+  dateApplied: string
+  followUpDate: string
+  cvUsed: string
+  portfolioIncluded: boolean
+  notes: string
+  skillsText: string
+}
+
+type ValidationResult = {
+  isValid: boolean
+  message: string
+}
+
+const initialFormData: ApplicationFormData = {
   company: "",
   role: "",
   platform: "",
@@ -19,27 +48,68 @@ const initialFormData = {
   skillsText: ""
 }
 
-function ApplicationForm({ addApplication }) {
-  const [formData, setFormData] = useState(initialFormData)
+type NewJobApplication = Omit<JobApplication, "id">
 
-  function handleChange(event) {
-    const { name, value, type, checked } = event.target
+type ApplicationFormProps = {
+  addApplication: (
+    newApplication: NewJobApplication
+  ) => Promise<boolean>
+}
+
+function validateForm(
+  formData: ApplicationFormData
+): ValidationResult {
+  if (
+    !formData.company.trim() ||
+    !formData.role.trim() ||
+    !formData.priority
+  ) {
+    return {
+      isValid: false,
+      message: "Company, role and priority are required."
+    }
+  }
+
+  return {
+    isValid: true,
+    message: ""
+  }
+}
+
+function ApplicationForm({ 
+  addApplication 
+}: ApplicationFormProps) {
+  const [formData, setFormData] = 
+    useState<ApplicationFormData>(initialFormData)
+
+  function handleChange(
+    event: ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) {
+    const { name, value } = event.target
+
+    const newValue =
+      event.target instanceof HTMLInputElement &&
+      event.target.type === "checkbox"
+        ? event.target.checked
+        : value
 
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: type === "checkbox" ? checked : value
+      [name]: newValue
     }))
   }
 
-  async function handleSubmit(event) {
+  async function handleSubmit(
+    event: FormEvent<HTMLFormElement>
+  ) {
     event.preventDefault()
 
-    if (
-      !formData.company.trim() ||
-      !formData.role.trim() ||
-      !formData.priority
-    ) {
-      alert("Company, role and priority are required.")
+    const validationResult = validateForm(formData)
+
+    if (!validationResult.isValid) {
+      alert(validationResult.message)
       return
     }
 

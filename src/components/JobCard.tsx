@@ -1,14 +1,34 @@
 import { useState } from "react"
+import type { ChangeEvent } from "react"
+import type {
+    JobApplication,
+    JobStatus
+} from "../types/jobApplication"
 import JobDetailsModal from "./JobDetailsModal"
 import StatusBadge from "./StatusBadge"
 
-function JobCard({ job, showNotes, updateApplicationStatus }) {
+type JobCardProps = {
+    job: JobApplication
+    showNotes: boolean
+    updateApplicationStatus: (
+        application: JobApplication,
+        newStatus: JobStatus
+    ) => Promise<boolean>
+}
+
+function JobCard({ 
+    job, 
+    showNotes, 
+    updateApplicationStatus 
+}: JobCardProps) {
     const [showDetails, setShowDetails] = useState(false)
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [isUpdatingStatus, setIsUpdatingStatus] = useState(false)
 
-    async function handleStatusChange(event) {
-        const newStatus = event.target.value
+    async function handleStatusChange(
+        event: ChangeEvent<HTMLSelectElement>
+    ) {
+        const newStatus = event.target.value as JobStatus
 
         if (newStatus === job.status) {
             return
